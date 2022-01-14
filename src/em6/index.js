@@ -29,14 +29,22 @@
 
 // console.log(lorem);
 
-let person = {
-    "name": "Johan",
-    "age": 23,
-    "country": "CO"
-}
+// let person = {
+//     "name": "Johan",
+//     "age": 23,
+//     "country": "CO"
+// }
 
-console.log(person.name, person.age, person.country);
+// console.log(person.name, person.age, person.country);
 
-let {name, age, country} = person;
+// let {age, country} = person;
 
-console.log(age, country);
+// console.log(age, country);
+
+// let team1 = ["Eyey", "Jojo", "Hehe"];
+// let team2 = ["Grr", "Jejey", "Bebe"];
+
+// let education = ["Edu", ...team1, ...team2];
+
+// console.log(education);
+
