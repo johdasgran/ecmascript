@@ -16,15 +16,27 @@
 // user();
 // user("Jose", 41, "Costa Rica");
 
-let hello = "Hola";
-let world = "Mundo <3";
+// let hello = "Hola";
+// let world = "Mundo <3";
 
-console.log(hello + " " + world);
-console.log(`${hello} ${world}`);
+// console.log(hello + " " + world);
+// console.log(`${hello} ${world}`);
 
-let lorem = `lorem ipsu sad asjdjas shdsaldsad sajdoasjd
-sakdlksalñdksañlkdñlasds4
-sadasdsa3
-sdsdmlsam40`
+// let lorem = `lorem ipsu sad asjdjas shdsaldsad sajdoasjd
+// sakdlksalñdksañlkdñlasds4
+// sadasdsa3
+// sdsdmlsam40`
 
-console.log(lorem);
+// console.log(lorem);
+
+let person = {
+    "name": "Johan",
+    "age": 23,
+    "country": "CO"
+}
+
+console.log(person.name, person.age, person.country);
+
+let {name, age, country} = person;
+
+console.log(age, country);
