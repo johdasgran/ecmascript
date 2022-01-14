@@ -48,3 +48,18 @@
 
 // console.log(education);
 
+{
+    var globalVar = "Variable GLobal";
+}
+{
+    let globalLet = "Variable Let";
+    console.log(globalLet);
+}
+console.log(globalVar);
+
+
+
+const saludo = ["h","e","l"];
+saludo.push("l", "o")
+
+console.log(saludo);
