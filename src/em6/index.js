@@ -13,5 +13,12 @@ function user(name = "Mia", age = 24, country = "CO"){
 // person();
 // person("Jose", 41, "Costa Rica");
 
-user();
-user("Jose", 41, "Costa Rica");
+// user();
+// user("Jose", 41, "Costa Rica");
+
+let hello = "Hola";
+let world = "Mundo <3";
+
+console.log(hello + " " + world);
+console.log(`${hello} ${world}`);
+
