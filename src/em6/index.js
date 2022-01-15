@@ -64,9 +64,34 @@
 
 // console.log(saludo);
 
-let name = "Johan";
-let lastname = "Hehehe";
+// let name = "Johan";
+// let lastname = "Hehehe";
 
-obj = {name, lastname}
+// obj = {name, lastname}
 
-console.log(obj)
+// console.log(obj)
+
+// const obj = [
+//     {name: "Johan", age: 23},
+//     {name: "Hei", age: 21}
+// ]
+
+// let listOfAge = obj.map(function (item) {
+//     console.log(item.age);
+// });
+
+// let listOfNname = obj.map(item => {console.log(item.name);});
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if(true){
+            resolve("Hey!");
+        } else {
+            reject("Ups!")
+        }
+    });
+}
+
+helloPromise()
+.then(response => console.log(response))
+.catch(error => console.log(error));
