@@ -82,16 +82,28 @@
 
 // let listOfNname = obj.map(item => {console.log(item.name);});
 
-const helloPromise = () => {
-    return new Promise((resolve, reject) => {
-        if(true){
-            resolve("Hey!");
-        } else {
-            reject("Ups!")
-        }
-    });
-}
+// const helloPromise = () => {
+//     return new Promise((resolve, reject) => {
+//         if(true){
+//             resolve("Hey!");
+//         } else {
+//             reject("Ups!")
+//         }
+//     });
+// }
 
-helloPromise()
-.then(response => console.log(response))
-.catch(error => console.log(error));
+// helloPromise()
+// .then(response => console.log(response))
+// .catch(error => console.log(error));
+
+var p1 = new Promise((resolve, reject) => {
+    resolve('Success!');
+    or
+    // reject(new Error("Error! haha"));
+  });
+  
+  p1.then(value => {
+    console.log(value); // Success!
+  }, reason => {
+    console.error(reason); // Error!
+  });
