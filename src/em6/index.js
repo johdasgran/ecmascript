@@ -6,6 +6,7 @@
 //     console.log(name, age, country);
 // }
 
+
 // function user(name = "Mia", age = 24, country = "CO"){
 //     console.log(name, age, country);
 // }
@@ -96,14 +97,54 @@
 // .then(response => console.log(response))
 // .catch(error => console.log(error));
 
-var p1 = new Promise((resolve, reject) => {
-    resolve('Success!');
-    or
-    // reject(new Error("Error! haha"));
-  });
+// var p1 = new Promise((resolve, reject) => {
+//     resolve('Success!');
+//     or
+//     // reject(new Error("Error! haha"));
+//   });
   
-  p1.then(value => {
-    console.log(value); // Success!
-  }, reason => {
-    console.error(reason); // Error!
-  });
+//   p1.then(value => {
+//     console.log(value); // Success!
+//   }, reason => {
+//     console.error(reason); // Error!
+//   });
+
+
+  class calculator {
+    constructor(){
+      this.valueA;
+      this.valueB;
+    }
+
+    sum(valueA, valueB){
+      this.valueA = valueA;
+      this.valueB = valueB;
+      return this.valueA + this.valueB;
+    }
+
+  }
+
+  const s = new calculator();
+
+  console.log(s.sum(8, 7));
+
+
+// import { hello } from './module';
+
+// const hello = require('./module');
+
+// console.log(hello());
+
+/*** GENERATORS ***/
+
+
+function* helloWorld(){
+  if(true){
+    yield "Hello, "
+  }
+  true ? yield "Johan." : "";
+}
+
+const g = helloWorld();
+
+console.log(g.next().value + g.next().value);
