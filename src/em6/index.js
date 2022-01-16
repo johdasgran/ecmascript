@@ -223,3 +223,24 @@ async function asyncCall() {
 asyncCall();
 
 /** JUEGO CON PROMESAS, ASYNC AWAIT (Call) */
+
+
+const obj = {
+  name: "Johan",
+  age: 23,
+  country: "Colombia"
+}
+
+let { name, ...all} = obj;
+
+// console.log(typeof all)
+// console.log(name, all)
+// console.log(name, all.age)
+
+const user = {
+  ...obj,
+  correo: "asda@gmail.com",
+  direccion: "Calle 23x 6y"
+}
+
+console.log(user);
