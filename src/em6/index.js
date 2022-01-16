@@ -110,23 +110,23 @@
 //   });
 
 
-  class calculator {
-    constructor(){
-      this.valueA;
-      this.valueB;
-    }
+  // class calculator {
+  //   constructor(){
+  //     this.valueA;
+  //     this.valueB;
+  //   }
 
-    sum(valueA, valueB){
-      this.valueA = valueA;
-      this.valueB = valueB;
-      return this.valueA + this.valueB;
-    }
+  //   sum(valueA, valueB){
+  //     this.valueA = valueA;
+  //     this.valueB = valueB;
+  //     return this.valueA + this.valueB;
+  //   }
 
-  }
+  // }
 
-  const s = new calculator();
+  // const s = new calculator();
 
-  console.log(s.sum(8, 7));
+  // console.log(s.sum(8, 7));
 
 
 // import { hello } from './module';
@@ -138,13 +138,88 @@
 /*** GENERATORS ***/
 
 
-function* helloWorld(){
-  if(true){
-    yield "Hello, "
-  }
-  true ? yield "Johan." : "";
+// function* helloWorld(){
+//   if(true){
+//     yield "Hello, "
+//   }
+//   true ? yield "Johan." : "";
+// }
+
+// const g = helloWorld();
+
+// console.log(g.next().value + g.next().value);
+
+
+const saludo = () => {
+  return new Promise((resolve, reject) => {
+    (false)
+      ? setTimeout(() => resolve("Jey jey ho ho"), 3000)
+      : reject(new Error("Error pirata"));
+  });
 }
 
-const g = helloWorld();
+// const helloAsync = async () => {
+//   const hello = await saludo();
+//   console.log(hello);
+// }
 
-console.log(g.next().value + g.next().value);
+// helloAsync();
+
+const otherHello = async () => {
+  try {
+    const hello = await saludo();
+    console.log(hello);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+otherHello();
+
+/***00 */
+
+// const helloWorld = () => {
+//   return new Promise((resolve, reject) => {
+//       (true) ?
+//           setTimeout(() => resolve("Hello World"), 3000) :
+//           reject(new Error("Fatal Error"))
+//   });
+// }
+
+// const byeWorld = () => {
+//   return new Promise((resolve, reject) => {
+//       (true) ? 
+//       setTimeout(() => resolve("Bye world"), 3000) :
+//       reject(new Error("Fatality"))
+//   });
+// }
+
+// const saySomething = async () => {
+//   const hi = await helloWorld()
+//   console.log(hi)
+//   const goodBye = await byeWorld()
+//   console.log(goodBye)
+// }
+
+// saySomething();
+
+/*** CALL, ASYNC AWAIT ***/
+
+function resolveAfter4Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 4000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling...');
+  const result = await resolveAfter4Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+asyncCall();
+
+/** JUEGO CON PROMESAS, ASYNC AWAIT (Call) */
