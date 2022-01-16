@@ -294,3 +294,76 @@ if(user?.profile?.email) {
 } else{
     console.log('fail')
 }
+
+
+// 🧯 Replace
+
+const string = "JavaScript es maravilloso, con JavaScript puedo crear el futuro de la web.";
+// const replacedString = string.replace("JavaScript", "Python");
+// console.log(replacedString);
+
+
+const replacedString2 = string.replaceAll("JavaScript", "Python");
+console.log(replacedString2);
+
+
+// 🔒 Metodos privados
+class Message {
+    #show(val){ // Con el # convertimos al método en privado
+        console.log(val);
+    };
+};
+
+// const message = new Message();
+// message.show('Hola!');
+
+//  👽 Promise Any
+
+const promise1 = new Promise((resolve, reject) => reject("1"));
+const promise2 = new Promise((resolve, reject) => resolve("2"));
+const promise3 = new Promise((resolve, reject) => resolve("3"));
+
+Promise.any([promise1, promise2, promise3])
+    .then(response => console.log(response));
+
+
+//  🦴 WeakRef(element);
+
+class AnyClass {
+    constructor(element){
+        this.ref = new WeakRef
+    }
+    // {...}
+}
+
+
+let isTrue = true;//false
+let isFalse = false;
+console.log(isTrue &&= 80);
+
+console.log(isTrue ||= "hahaha");
+
+
+//El operador de asignación AND lógico ( x &&= y) solo asigna si x es verdadero .
+
+let a = 1;
+let b = 0;
+
+a &&= 2;
+console.log(a);
+// expected output: 2
+
+b &&= 2;
+console.log(b);
+// expected output: 0
+
+
+let x = 0;
+let y = 1;
+
+// x &&= 0; // 0
+x &&= 1; // 0
+y &&= 1; // 1
+// y &&= 0; // 0
+
+console.log(x, y )
