@@ -265,3 +265,32 @@ console.log(Object.fromEntries(entries))
 let mySymbol = 'My Symbol';
 let symbol = Symbol(mySymbol);
 console.log(symbol.description);
+
+
+/*** EM11 */
+
+
+// 🌎 Global This
+
+console.log(window);
+console.log(globalThis);
+
+// 🔍 Nuevo operador lógico: null operator
+
+const fooo = null ?? 'default string';
+console.log(fooo);
+
+const fooo2 = 'not null' ?? 'default string';
+console.log(fooo2)
+
+
+// ⛓ Optional chaining
+
+const user = {};
+console.log(user?.profile?.email);
+
+if(user?.profile?.email) {
+    console.log('email')
+} else{
+    console.log('fail')
+}
