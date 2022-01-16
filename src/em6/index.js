@@ -256,3 +256,12 @@ console.log(user);
 
 
  /*** * */
+
+
+// array to object
+let entries = [["name", "Johan"], ["age", 23]];
+console.log(Object.fromEntries(entries))
+
+let mySymbol = 'My Symbol';
+let symbol = Symbol(mySymbol);
+console.log(symbol.description);
